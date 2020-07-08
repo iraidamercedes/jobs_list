@@ -1,0 +1,12 @@
+<main id="app">
+    <header>
+      <img src="../assets/bg-header-desktop.svg">
+    </header>
+    <section class="profiles">
+      <Profile
+        v-for="profile in profiles"
+        :key="profile.id"
+        :profile="profile"
+        />
+    </section>
+</main>
