@@ -18,6 +18,7 @@
         </div>
         <div class="profile-tags">
             <div class="profile-tags-wrapp">
+                <a class="tag-role-text">{{profile.role}}</a>
                 <a class="tag-level-text">{{profile.level}}</a>
                 <p class="tag-laguages-text" v-for="language in profile.languages">{{language}}</p>
             </div>
