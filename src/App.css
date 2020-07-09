@@ -23,10 +23,31 @@ main {
 
 }
 
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+
 header {
     display: block;
     background: #5da5a4;
-    margin-bottom: 50px;
+    margin-bottom: -30px;
+}
+
+.tagbar {
+    display: flex;
+    background: #fff;
+    width: 800px;
+    height: 60px;
+    border-radius: 0.375rem;
+    box-shadow: 0 0.2rem 1.5rem rgba(0, 0, 0, 0.2);
+    margin-bottom: 25px;
+}
+
+.tags{
+    display: flex;
+    flex-direction: row;
+    background: #fff;
 }
 
 .profile {
@@ -40,7 +61,14 @@ header {
     box-shadow: 0 0.2rem 1.5rem rgba(0, 0, 0, 0.2);
     border-radius: 0.375rem;
     align-items: center;
+    transition: 0.1s;
 }
+
+.profile:hover{
+    border-left: 5px solid #5da5a4;
+    margin-left: 25px;
+}
+
 .profile-inner{
     width: 35%;
 }
@@ -53,7 +81,7 @@ header {
 }
 
 .company-text {
-    color: #5aa4a7  ;
+    color: #5aa4a7;
     display: inline-block;
     font-size: 13px;
     font-weight: bold;
@@ -61,6 +89,34 @@ header {
     letter-spacing: 1px;
     margin: 0 0 0.25rem 0;
     padding: 0 0 0.80rem 0;
+}
+
+.new-text {
+    background: #61a2a4;
+    border-radius: 15px;
+    padding: 8px;
+    padding-bottom: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    margin-left: 0.50em;
+    margin-right: 0.50em;
+    transition: 0.15s;
+}
+
+.featured-text {
+    background: black;
+    border-radius: 15px;
+    padding: 8px;
+    padding-bottom: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    margin-left: 0.50em;
+    margin-right: 0.50em;
+    transition: 0.15s;
 }
 
 .position-text {
@@ -72,6 +128,11 @@ header {
     letter-spacing: 0px;
     margin: 0 0 0.25rem 0;
     padding: 0 0 0.50rem 0;
+}
+
+.position-text:hover{
+    color: #5aa4a7;
+    transition: 0.15s;
 }
 
 .position-info-text-wrapp {
@@ -94,47 +155,76 @@ header {
     letter-spacing: 0.5px;
 }
 
-.tag-role-text {
+button {
+    font-family: 'Spartan', sans-serif;
     background: hsl(180, 52%, 96%);
+    color:#019f86; ;
+    border: none;
+    padding: 5px;
     border-radius: 4px;
-    padding: 0.25em;
-    border-color: hsl(180, 52%, 96%) ;
+    font-size: 13px;
+    font-weight: bold;
     margin-left: 0.30em;
     margin-right: 0.30em;
+    transition: 0.15s;
 
 }
 
-.tag-role-text:hover {
+button:hover {
     background: #5da5a4;
     color: #fff;
+    outline: none;
 }
 
-.tag-level-text {
-    background: hsl(180, 52%, 96%);
-    border-radius: 4px;
-    padding: 0.25em;
-    border-color: hsl(180, 52%, 96%) ;
-    margin-left: 0.30em;
-    margin-right: 0.30em;
-
-}
-
-.tag-level-text:hover {
+button:focus {
     background: #5da5a4;
     color: #fff;
+    outline: none;
 }
 
-.tag-laguages-text {
-    background: hsl(180, 52%, 96%);
-    border-radius: 4px;
-    padding: 0.25em;
-    border-color: hsl(180, 52%, 96%) ;
-    margin-left: 0.30em;
-    margin-right: 0.30  em;
+@media screen and (max-width: 800px)  {
+    
+    .tagbar {
+        display: flex;
+        width: 400px;
+        height: 100px;
+    }
 
-}
+    .profile {
+        width: 400px;
+        max-height: 500px;
+        display: block;
+        flex-direction: column;
+        margin: 20px;
+        box-shadow: 0 0.2rem 1.5rem rgba(0, 0, 0, 0.2);
+        border-radius: 0.375rem;
+        transition: 0.1s;
+    }
 
-.tag-laguages-text:hover {
-    background: #5da5a4;
-    color: #fff;
+    .profile:hover{
+        border-left: none;
+        margin-left: 20px;
+    }
+
+    .profile-inner{
+        width: 85%;
+        padding-bottom: 10px;
+    }
+
+    .profile-images-wrap {
+        display: flex;
+        padding-left: 35%;
+        margin-bottom: 20px;
+    }
+
+    .profile-tags{
+        border-top:lightsteelblue solid 1px;
+        padding-top: 20px;
+    }
+
+    button {
+        padding: none;
+    }
+
+    
 }

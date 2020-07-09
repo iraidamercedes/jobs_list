@@ -1,9 +1,11 @@
 import Profile from '../components/Profile';
+import Tag from '../components/Tag';
 
 export default {
   name: 'app',
   components: {
-    Profile
+    Profile,
+    Tag
   },
   data () {
     return {
@@ -155,7 +157,13 @@ export default {
           "languages": ["JavaScript"],
           "tools": ["React", "Sass"]
         }
-      ]
+      ],
+
+      computed: {
+        uniqRoles () {
+           return _.uniqBy(profiles, 'role')
+        }
+     }
     }
   }
 }

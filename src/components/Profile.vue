@@ -6,6 +6,8 @@
         <div class="profile-inner">
             <div class="profile-text-wrapp">
                 <h2 class="company-text">{{profile.company}}</h2>
+                <a class="new-text" v-if="profile.new===true">new!</a>
+                <a class="featured-text" v-if="profile.featured===true">featured</a>
                 <h1 class="position-text">{{profile.position}}</h1>
             </div>
             <div class="position-info-text-wrapp">
@@ -18,9 +20,9 @@
         </div>
         <div class="profile-tags">
             <div class="profile-tags-wrapp">
-                <a class="tag-role-text">{{profile.role}}</a>
-                <a class="tag-level-text">{{profile.level}}</a>
-                <p class="tag-laguages-text" v-for="language in profile.languages">{{language}}</p>
+                <button class="tag-role-text">{{profile.role}}</button>
+                <button class="tag-level-text">{{profile.level}}</button>
+                <button class="tag-laguages-text" v-for="language in profile.languages">{{language}}</button>
             </div>
         </div>
     </div>
