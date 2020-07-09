@@ -20,7 +20,7 @@
         </div>
         <div class="profile-tags">
             <div class="profile-tags-wrapp">
-                <button class="tag-role-text">{{profile.role}}</button>
+                <button class="tag-role-text" v-on:click="selectRole(profile.role)">{{profile.role}}</button>
                 <button class="tag-level-text">{{profile.level}}</button>
                 <button class="tag-laguages-text" v-for="language in profile.languages">{{language}}</button>
             </div>
@@ -31,6 +31,11 @@
 <script>
 export default {
     name: 'profile',
-    props: ['profile']
+    props: ['profile'],
+    methods: {
+        selectRole : function (role) {
+            this.$emit("selectedRole", role)
+        }
+    }
 }
 </script>

@@ -7,6 +7,12 @@ export default {
     Profile,
     Tag
   },
+  methods: {
+    receiveRole : function (role) {
+        const rta = this.profiles.filter(item => item.role===role)
+        this.profiles = rta
+        }
+    },
   data () {
     return {
       profiles: [
@@ -158,12 +164,6 @@ export default {
           "tools": ["React", "Sass"]
         }
       ],
-
-      computed: {
-        uniqRoles () {
-           return _.uniqBy(profiles, 'role')
-        }
-     }
     }
   }
 }

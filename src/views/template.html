@@ -10,6 +10,7 @@
         v-for="profile in profiles"
         :key="profile.id"
         :profile="profile"
+        v-on:selectedRole="receiveRole($event)"
         />
     </section>
 </main>
