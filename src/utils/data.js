@@ -7,12 +7,19 @@ export default {
     Profile,
     Tag
   },
+
   methods: {
     receiveRole : function (role) {
-        const rta = this.profiles.filter(item => item.role===role)
-        this.profiles = rta
+        if (role != "clear"){
+            const rta = this.profiles.filter(item => item.role===role)
+            this.profiles = rta
+        } else{
+            this.profiles
         }
-    },
+        console.log(role)
+    }
+ },
+
   data () {
     return {
       profiles: [

@@ -3,7 +3,13 @@
       <img src="../assets/bg-header-desktop.svg">
     </header>
     <section >
-        <div class="tagbar"></div>
+      <div class="tagbar-wrap">
+        <div class="tagbar">
+          <a class="tag-role">Frontend</a>
+          <button class="remove-button">X</button>
+          <button class="clear-button" v-on:click="selectRole('clear')">Clear</button>
+        </div>
+      </div>
     </section>
     <section>
       <Profile
@@ -11,6 +17,6 @@
         :key="profile.id"
         :profile="profile"
         v-on:selectedRole="receiveRole($event)"
-        />
+      />
     </section>
 </main>
