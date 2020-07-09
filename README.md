@@ -1,6 +1,10 @@
-# app
+# :zap: ICDBIS Tech Challenge
 
-## Project setup
+Vue app to recreate requested design.
+
+Clone this repository in your machine and then.
+
+## :rocket: Project setup
 ```
 npm install
 ```
